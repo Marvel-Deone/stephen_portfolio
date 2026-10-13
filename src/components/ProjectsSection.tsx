@@ -26,7 +26,7 @@ const projects = [
       'Sequential Keras classifier uses categorical encoding and standardized features to return a risk probability.',
       'DRF API validates clinical input ranges and handles absent symptoms with defaults; deployed on Render.',
     ],
-    href: 'https://pneumonia-project-1-8am5.onrender.com',
+    href: 'https://pneumonia-project-1-8am5.onrender.com/api',
     actionLabel: 'Open live application',
     note: 'Designed to support clinical review, not replace professional diagnosis.',
     videoSrc: '/pneumonia-risk-demo.mp4',
