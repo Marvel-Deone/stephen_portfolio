@@ -1,0 +1,63 @@
+.section-kicker { color: #789b55; font-size: 11px; font-weight: 600; letter-spacing: .17em; text-transform: uppercase; }
+.section-title { font-family: 'Manrope', sans-serif; font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 500; line-height: 1.2; letter-spacing: -.045em; }
+.timeline-row { position: relative; padding: 0 0 2rem 1.75rem; border-left: 1px solid #d5ddce; }
+.timeline-row:last-child { border-left-color: transparent; padding-bottom: 0; }
+.timeline-dot { position: absolute; left: -5px; top: .2rem; width: 9px; height: 9px; border-radius: 999px; background: #789b55; box-shadow: 0 0 0 4px #eef1e9; }
+.timeline-date { color: #789b55; font-size: 11px; font-weight: 600; letter-spacing: .13em; text-transform: uppercase; }
+.timeline-dot::after { position: absolute; inset: -4px; border: 1px solid rgb(120 155 85 / 55%); border-radius: inherit; content: ''; }
+.hero-gradient-text { background: linear-gradient(105deg, #789b55 5%, #4f9b7c 48%, #d18c55 100%); background-clip: text; color: transparent; }
+.focus-ticker-track { will-change: transform; }
+.section-kicker { transition: color 180ms ease; }
+.reveal.is-visible .section-kicker { color: #638348; }
+.reveal.is-visible .timeline-dot::after { animation: dot-pulse 2.4s ease-out infinite; }
+.interest-chip { transition: transform 200ms ease, border-color 200ms ease, background-color 200ms ease; }
+.project-card { position: relative; overflow: hidden; }
+.project-card::before, .project-card::after { position: absolute; z-index: 0; border: 1px solid rgb(120 155 85 / 15%); border-radius: 999px; content: ''; pointer-events: none; }
+.project-card::before { top: -2rem; right: -1.5rem; width: 8rem; height: 8rem; }
+.project-card::after { top: 1rem; right: 2rem; width: 3rem; height: 3rem; border-color: rgb(209 140 85 / 22%); }
+.project-card > * { position: relative; z-index: 1; }
+.play-mark { transition: transform 220ms ease, background-color 220ms ease; }
+a:hover .arrow-mark { transform: translate(3px, -1px); }
+.arrow-mark { transition: transform 180ms ease; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .reveal { opacity: 0; transform: translateY(22px); transition: opacity 700ms ease, transform 700ms cubic-bezier(.2,.7,.2,1); }
+  .reveal.is-visible { opacity: 1; transform: translateY(0); }
+  .portrait-float { animation: portrait-float 7s ease-in-out infinite; }
+  .ambient-glow { animation: ambient-pulse 8s ease-in-out infinite alternate; }
+  .science-orbit { animation: orbit-spin 18s linear infinite; }
+  .focus-ticker-track { animation: ticker-scroll 34s linear infinite; }
+  .focus-ticker:hover .focus-ticker-track { animation-play-state: paused; }
+  .interest-chip:hover { transform: translateY(-3px); border-color: #b5c99f; background-color: #f7f9f3; }
+  .hero-copy > * { opacity: 0; animation: hero-item-in 650ms cubic-bezier(.2,.7,.2,1) forwards; }
+  .reveal.is-visible .hero-copy > :nth-child(1) { animation-delay: 80ms; }
+  .reveal.is-visible .hero-copy > :nth-child(2) { animation-delay: 180ms; }
+  .reveal.is-visible .hero-copy > :nth-child(3) { animation-delay: 300ms; }
+  .reveal.is-visible .hero-copy > :nth-child(4) { animation-delay: 420ms; }
+  .reveal.is-visible .hero-copy > :nth-child(5) { animation-delay: 520ms; }
+  .project-card { transition: transform 240ms ease, border-color 240ms ease, box-shadow 240ms ease; }
+  .project-card:hover { transform: translateY(-4px); box-shadow: 0 16px 38px rgb(23 51 45 / 7%); }
+  .project-card:hover .play-mark { transform: scale(1.08); background-color: #456c50; }
+}
+
+@keyframes portrait-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes ambient-pulse {
+  from { opacity: .55; transform: scale(.92); }
+  to { opacity: 1; transform: scale(1.08); }
+}
+
+@keyframes orbit-spin { to { transform: rotate(360deg); } }
+@keyframes ticker-scroll { to { transform: translateX(-50%); } }
+@keyframes hero-item-in { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes dot-pulse { 0% { opacity: .8; transform: scale(.65); } 100% { opacity: 0; transform: scale(1.7); } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+  .focus-ticker-track { width: 100%; }
+  .focus-ticker-track ul:first-child { flex-wrap: wrap; justify-content: center; }
+  .focus-ticker-track ul[aria-hidden="true"] { display: none; }
+}
