@@ -19,7 +19,7 @@ export function HeroSection() {
       <div className="portrait-float relative mx-auto w-full max-w-[470px] md:ml-auto">
         <div aria-hidden="true" className="science-orbit absolute -left-10 top-6 z-10 hidden h-24 w-24 rounded-full border border-dashed border-[#9eae83] sm:block"><span className="orbit-dot absolute -right-1 top-1/2 h-3 w-3 rounded-full bg-[#dc9c64]" /><span className="orbit-dot orbit-dot-delay absolute bottom-0 left-4 h-2.5 w-2.5 rounded-full bg-[#789b55]" /></div>
         <div className="absolute -right-4 -top-5 h-full w-full rounded-[2rem] border border-[#dfe4d9] md:-right-6 md:-top-7" />
-        <div className="group relative aspect-[4/4.5] overflow-hidden rounded-[2rem] bg-[#e7e9df]"><img src="/stephen-adeloye.jpg" alt="Portrait of Adeloye Stephen Oluwatofunmi" className="h-full w-full object-cover object-[center_29%] transition-transform duration-700 group-hover:scale-[1.035]" /></div>
+        <div className="group relative aspect-[4/4.5] overflow-hidden rounded-[2rem] bg-[#e7e9df]"><img src="/Stephen.jpg" alt="Portrait of Adeloye Stephen Oluwatofunmi" className="h-full w-full object-cover object-[center_29%] transition-transform duration-700 group-hover:scale-[1.035]" /></div>
         <div className="absolute -bottom-5 -left-5 rounded-2xl border border-[#e7e9df] bg-white px-5 py-4 shadow-[0_12px_40px_rgba(23,51,45,.08)]"><p className="text-[10px] uppercase tracking-[.17em] text-[#809080]">Focus</p><p className="mt-1 text-sm font-medium">Biochemistry × data science</p></div>
         <div aria-hidden="true" className="ambient-glow absolute -right-10 top-10 -z-10 h-32 w-32 rounded-full bg-[#e9eddc] blur-2xl" />
       </div>
