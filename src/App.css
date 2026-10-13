@@ -16,7 +16,6 @@
 .project-card::before { top: -2rem; right: -1.5rem; width: 8rem; height: 8rem; }
 .project-card::after { top: 1rem; right: 2rem; width: 3rem; height: 3rem; border-color: rgb(209 140 85 / 22%); }
 .project-card > * { position: relative; z-index: 1; }
-.play-mark { transition: transform 220ms ease, background-color 220ms ease; }
 a:hover .arrow-mark { transform: translate(3px, -1px); }
 .arrow-mark { transition: transform 180ms ease; }
 
@@ -37,7 +36,6 @@ a:hover .arrow-mark { transform: translate(3px, -1px); }
   .reveal.is-visible .hero-copy > :nth-child(5) { animation-delay: 520ms; }
   .project-card { transition: transform 240ms ease, border-color 240ms ease, box-shadow 240ms ease; }
   .project-card:hover { transform: translateY(-4px); box-shadow: 0 16px 38px rgb(23 51 45 / 7%); }
-  .project-card:hover .play-mark { transform: scale(1.08); background-color: #456c50; }
 }
 
 @keyframes portrait-float {

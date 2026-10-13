@@ -13,7 +13,7 @@ const projects = [
     ],
     href: 'https://tips-predictor.onrender.com/',
     actionLabel: 'Open live application',
-    videoPlaceholder: true,
+    videoSrc: '/tips-predictor-demo.mp4',
   },
   {
     eyebrow: 'Healthcare · Deep learning',
@@ -29,7 +29,7 @@ const projects = [
     href: 'https://pneumonia-project-1-8am5.onrender.com',
     actionLabel: 'Open live application',
     note: 'Designed to support clinical review, not replace professional diagnosis.',
-    videoPlaceholder: true,
+    videoSrc: '/pneumonia-risk-demo.mp4',
   },
 ]
 

@@ -9,7 +9,7 @@ export type ProjectCardProps = {
   highlights: string[]
   href?: string
   actionLabel?: string
-  videoPlaceholder?: boolean
+  videoSrc?: string
   note?: string
 }
 
@@ -22,7 +22,7 @@ export function ProjectCard({
   highlights,
   href,
   actionLabel,
-  videoPlaceholder = false,
+  videoSrc,
   note,
 }: ProjectCardProps) {
   return (
@@ -32,13 +32,14 @@ export function ProjectCard({
         {href && <span className="rounded-full bg-[#eaf0e3] px-3 py-1 text-[10px] font-medium text-[#607a4c]">Live</span>}
       </div>
 
-      {videoPlaceholder && (
-        <div role="img" aria-label="Video walkthrough coming soon" className="video-placeholder mt-6 flex min-h-40 items-center justify-center rounded-2xl border border-[#e2e7dc] bg-[#eef1e9]">
-          <div className="flex flex-col items-center gap-3 text-center">
-            <span aria-hidden="true" className="play-mark flex h-12 w-12 items-center justify-center rounded-full bg-[#17332d] pl-1 text-lg text-white">▶</span>
-            <span className="text-xs font-medium text-[#718078]">Video walkthrough coming soon</span>
-          </div>
-        </div>
+      {videoSrc && (
+        <figure className="mt-6 overflow-hidden rounded-2xl border border-[#e2e7dc] bg-[#17332d]">
+          <video controls preload="metadata" playsInline aria-label={`Video walkthrough: ${title}`} className="aspect-video w-full">
+            <source src={videoSrc} type="video/mp4" />
+            Your browser does not support embedded video. You can open the project site to view the walkthrough.
+          </video>
+          <figcaption className="px-4 py-2.5 text-xs text-white/75">Project walkthrough</figcaption>
+        </figure>
       )}
 
       <div className="mt-5">
