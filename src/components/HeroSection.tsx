@@ -11,7 +11,10 @@ export function HeroSection() {
           <a href="#projects" className="rounded-full bg-[#17332d] px-6 py-3 text-sm font-medium text-white transition hover:bg-[#294f42]">Explore my work <Arrow /></a>
           <a href="#contact" className="rounded-full border border-[#d9dfd4] px-6 py-3 text-sm font-medium transition hover:bg-white">Get in touch <Arrow diagonal /></a>
         </div>
-        <div className="mt-12 flex items-center gap-3 text-sm text-[#738078]"><span className="relative flex h-2.5 w-2.5"><span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#8fae6d] opacity-40" /><span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-[#789b55]" /></span>Based in Oyo State, Nigeria</div>
+        {/* <div className="mt-12 flex items-center gap-3 text-sm text-[#738078]"><span className="relative flex h-2.5 w-2.5"><span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#8fae6d] opacity-40" /><span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-[#789b55]" />
+        </span>
+        Based in Oyo State, Nigeria
+        </div> */}
       </div>
       <div className="portrait-float relative mx-auto w-full max-w-[470px] md:ml-auto">
         <div aria-hidden="true" className="science-orbit absolute -left-10 top-6 z-10 hidden h-24 w-24 rounded-full border border-dashed border-[#9eae83] sm:block"><span className="orbit-dot absolute -right-1 top-1/2 h-3 w-3 rounded-full bg-[#dc9c64]" /><span className="orbit-dot orbit-dot-delay absolute bottom-0 left-4 h-2.5 w-2.5 rounded-full bg-[#789b55]" /></div>
